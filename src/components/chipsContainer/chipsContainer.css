@@ -1,0 +1,18 @@
+.chips-container{
+    width: 980px;
+    margin: 54px auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.chips-container .chips-wrap{
+    width: 484px;
+    height: 130px;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.chips-container .chips-wrap >*{
+    margin-right: 6px;
+}

@@ -1,0 +1,30 @@
+.pokemon-viewer{
+    background-color: var(--black-color);
+    color: var(--light-gray-color);
+    width: 484px;
+    padding: 44px 44px 16px;
+
+    box-sizing: border-box;
+}
+
+.name{
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.sprite{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.sprite img{
+    width: 100%;
+}
+
+.stats{
+    font-weight: 500;
+    line-height: 150%;
+
+
+    margin-top: 44px;
+}
