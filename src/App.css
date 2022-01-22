@@ -1,8 +1,13 @@
 .App {
-  text-align: center;
-
   /*base text styles*/
   font-family: var(--font-family-primary);
   font-weight: 500;
   color: var(--white-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 1280px;
+  margin: 100px auto 0;
 }
