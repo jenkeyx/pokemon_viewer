@@ -1,0 +1,23 @@
+/*raleway-medium*/
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: url("fonts/Raleway/raleway-v22-latin_cyrillic-500.woff2") format("woff2");
+}
+
+/*raleway-semi-bold*/
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: url("fonts/Raleway/raleway-v22-latin_cyrillic-600.woff2") format("woff2");
+}
+
+/*raleway-bold*/
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: bold;
+    src: url("fonts/Raleway/raleway-v22-latin_cyrillic-800.woff2") format("woff2");
+}
