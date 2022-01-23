@@ -11,7 +11,9 @@ function ChipsContainer() {
 
   useEffect(() => {
     axios.get(API_URL + "?limit=6").then((response) => {
-      setPokemons(response.data.results);
+      let responseData = response.data.results;
+      setPokemons(responseData);
+      setSelectedPokemon(Array.from(responseData)[0].name);
     });
   }, [setPokemons]);
 

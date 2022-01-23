@@ -15,3 +15,20 @@
 - [React.js](https://reactjs.org) верстка компонентов
 - [Material UI](https://mui.com) библиотека с UI-компонентами
 - [Axios](https://axios-http.com) для формирования запросов на сервер
+
+## Testing
+
+###Jest
+
+- Smoke-тесты для UI
+- Тесты для вспомогательных функций
+
+Тесты расположены в файле `./src/App.test.js`
+
+## CodeStyle
+
+- ESLint – линтер  
+  `eslint --fix ./src `
+
+- Prettier – форматирование кода  
+  `npx prettier --write.`
