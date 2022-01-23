@@ -17,10 +17,7 @@ function App() {
                 styleOverrides: {
                     root: {
                         fontSize: 20,
-                        paddingTop: "30px",
-                        paddingBottom: "30px",
-                        paddingLeft: "9px",
-                        paddingRight: "9px",
+                        padding: "30px 9px",
                         borderRadius: "44px",
                         marginBottom: "10px",
                         backgroundColor: "#1986EC"
