@@ -36,5 +36,4 @@ function ChipsContainer() {
     )
 }
 
-
 export default ChipsContainer

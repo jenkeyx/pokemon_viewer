@@ -1,4 +1,4 @@
-.pokemon-viewer{
+.pokemon-viewer {
     background-color: var(--black-color);
     color: var(--light-gray-color);
     width: 484px;
@@ -7,13 +7,13 @@
     box-sizing: border-box;
 }
 
-.name{
+.name {
     font-weight: 800;
     font-size: 48px;
     line-height: 100%;
 }
 
-.sprite{
+.sprite {
     width: 200px;
     height: 200px;
     margin: 44px auto;
@@ -23,11 +23,11 @@
     justify-content: center;
 }
 
-.sprite img{
+.sprite img {
     object-fit: cover;
 }
 
-.stats{
+.stats {
     font-weight: 500;
     font-size: 17px;
     line-height: 150%;
