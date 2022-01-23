@@ -19,7 +19,7 @@ const themeStyles = {
       styleOverrides: {
         root: {
           fontSize: 20,
-          padding: "30px 9px",
+          padding: "30px 8px",
           borderRadius: "44px",
           marginBottom: "10px",
           backgroundColor: "#1986EC",
