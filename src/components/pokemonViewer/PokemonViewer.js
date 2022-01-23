@@ -2,7 +2,7 @@ import "./pokemonViewer.css"
 import axios from "axios";
 import {useEffect, useState} from "react";
 import pokemonPlaceholder from "../../icons/pokemon_placeholder.png"
-import "@fontsource/raleway/400.css"
+import {Typography} from "@mui/material";
 
 function PokemonViewer(props) {
 
@@ -54,11 +54,11 @@ function PokemonViewer(props) {
 
     return (
         <div className={"pokemon-viewer"}>
-            <div className={"name"}>
+            <Typography sx={{fontWeight:"bold", lineHeight: "100%"}} variant={"h3"}>
                 {isLoaded ? capitalizeFirstLetter(pokemonInfo.name) :
                     "Pokemon"
                 }
-            </div>
+            </Typography>
             <div className={"sprite"}>
                 {isLoaded ?
                     <img alt={"pokemon"}
@@ -67,18 +67,18 @@ function PokemonViewer(props) {
                     /> : null}
             </div>
             <div className={"stats"}>
-                <div>
+                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
                     {"Снялся в " + pokemonInfo.moves.length + " сериях"}
-                </div>
-                <div>
+                </Typography>
+                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
                     {"Id: " + pokemonInfo.id}
-                </div>
-                <div>
+                </Typography>
+                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
                     {"height: " + pokemonInfo.height}
-                </div>
-                <div>
+                </Typography>
+                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
                     {"attack: " + pokemonInfo.stats[1].base_stat}
-                </div>
+                </Typography>
             </div>
         </div>
     )

@@ -1,15 +1,19 @@
 import './App.css';
 import './styles/global.scss'
-import './styles/raleway.css'
 import Header from "./components/header/Header";
 import ChipsContainer from "./components/chipsContainer/ChipsContainer";
 import {createTheme, ThemeProvider} from "@mui/material";
+
+import "@fontsource/raleway/300.css"
+import "@fontsource/raleway/400.css"
+import "@fontsource/raleway/500.css"
+import "@fontsource/raleway/600.css"
+import "@fontsource/raleway/700.css"
 
 function App() {
     const THEME = createTheme({
         typography: {
             "fontFamily": "Raleway",
-            "fontSize": 22,
             "fontWeightLight": 300,
             "fontWeightRegular": 400,
             "fontWeightMedium": 500
@@ -18,6 +22,7 @@ function App() {
             MuiChip: {
                 styleOverrides: {
                     root: {
+                        fontSize: 22,
                         paddingTop: "30px",
                         paddingBottom: "30px",
                         paddingLeft: "8px",

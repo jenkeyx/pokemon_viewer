@@ -1,7 +1,5 @@
 .App {
-    /*base text styles*/
-    font-family: var(--font-family-primary);
-    font-weight: 400;
+    /*base text styles*/;
     color: var(--white-color);
 
     display: flex;
