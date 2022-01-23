@@ -3,10 +3,10 @@ import './styles/global.scss'
 import './styles/raleway.css'
 import Header from "./components/header/Header";
 import ChipsContainer from "./components/chipsContainer/ChipsContainer";
-import {createMuiTheme, ThemeProvider} from "@mui/material";
+import {createTheme, ThemeProvider} from "@mui/material";
 
 function App() {
-    const THEME = createMuiTheme({
+    const THEME = createTheme({
         typography: {
             "fontFamily": "Raleway",
             "fontSize": 22,

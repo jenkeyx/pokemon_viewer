@@ -7,23 +7,24 @@ function PokemonViewer(props) {
     const [pokemonInfo, setPokemonInfo] = useState();
 
     useEffect(() => {
-        const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
+        if (props.selectedPokemon){
+            const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
 
-        axios.get(apiUrl + props.selectedPokemon).then((response) => {
-            setPokemonInfo(response.data)
-        })
-
-    },);
+            axios.get(apiUrl + props.selectedPokemon).then((response) => {
+                setPokemonInfo(response.data)
+            })
+        }
+    },[props.selectedPokemon]);
 
 
     if (pokemonInfo){
         return (
             <div className={"pokemon-viewer"}>
                 <div className={"name"}>
-                    {pokemonInfo.name}
+                    {pokemonInfo ? pokemonInfo.name: "select pokemon"}
                 </div>
                 <div className={"sprite"}>
-                    <img alt={"pokemon " + pokemonInfo.name + " picture"} src={pokemonInfo.sprites.front_default}/>
+                    <img alt={"pokemon"} src={pokemonInfo.sprites.front_default}/>
                 </div>
                 <div className={"stats"}>
                     <div>
