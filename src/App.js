@@ -15,14 +15,14 @@ function App() {
             "fontWeightMedium": 500
         },
         components: {
-            MuiChip:{
-                styleOverrides:{
-                    root:{
+            MuiChip: {
+                styleOverrides: {
+                    root: {
                         paddingTop: "30px",
                         paddingBottom: "30px",
-                        paddingLeft:"8px",
+                        paddingLeft: "8px",
                         paddingRight: "8px",
-                        borderRadius:"44px",
+                        borderRadius: "44px",
                         backgroundColor: "#1986EC"
                     }
                 }
