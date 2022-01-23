@@ -1,5 +1,5 @@
 import "./header.css"
-import clickIcon from '../../icons/Desktop/Icon.svg'
+import clickIcon from '../../icons/Icon.svg'
 import {Typography} from "@mui/material";
 
 function Header() {
