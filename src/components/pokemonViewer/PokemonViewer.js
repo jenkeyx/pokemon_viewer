@@ -16,6 +16,11 @@ function PokemonViewer(props) {
         stats: [{}, {base_stat: ""}]
     }
 
+    //Имя с сервера приходит с маленькой буквы, потому надо вставить большую букву.
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     const [pokemonInfo, setPokemonInfo] = useState(stubPokemonInfo);
 
     useEffect(() => {
@@ -33,7 +38,7 @@ function PokemonViewer(props) {
         return (
             <div className={"pokemon-viewer"}>
                 <div className={"name"}>
-                    {pokemonInfo ? pokemonInfo.name : "select pokemon"}
+                    {pokemonInfo ? capitalizeFirstLetter(pokemonInfo.name) : "Select pokemon"}
                 </div>
                 <div className={"sprite"}>
                     <img alt={"pokemon"} src={pokemonInfo.sprites.front_default}/>

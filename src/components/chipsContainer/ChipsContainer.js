@@ -23,12 +23,13 @@ function ChipsContainer() {
     return (
         <div className={"chips-container"}>
             <div className={"chips-wrap"}>
-                {Array.from(pokemons).map((pokemon) =>
-                    <Chip
-                        label={pokemon.name}
-                        key={pokemon.name} color={"primary"}
-                        onClick={(e) => handleClick(e, pokemon.name)}/>
-                )}
+                {
+                    Array.from(pokemons).map((pokemon) =>
+                        <Chip
+                            label={pokemon.name}
+                            key={pokemon.name} color={"primary"}
+                            onClick={(e) => handleClick(e, pokemon.name)}/>
+                    )}
             </div>
             <PokemonViewer selectedPokemon={selectedPokemon}/>
         </div>

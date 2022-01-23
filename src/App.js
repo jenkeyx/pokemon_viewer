@@ -23,6 +23,7 @@ function App() {
                         paddingLeft:"8px",
                         paddingRight: "8px",
                         borderRadius:"44px",
+                        backgroundColor: "#1986EC"
                     }
                 }
             }
