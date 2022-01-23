@@ -1,4 +1,4 @@
-import "./chipsContainer.css"
+import "./chips-container.css"
 import PokemonViewer from "../pokemonViewer/PokemonViewer";
 import axios from "axios";
 import {useEffect, useState} from "react";
