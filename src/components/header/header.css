@@ -1,28 +1,28 @@
 .header {
-    font-size: 12px;
-    width: 980px;
+  font-size: 12px;
+  width: 980px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .title {
-    border: 1px solid;
-    border-color: var(--white-color);
-    padding:4px 6px 3px;
+  border: 1px solid;
+  border-color: var(--white-color);
+  padding: 4px 6px 3px;
 }
 
 .hint {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .hint img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .hint div {
-    width: 108px;
-    line-height: 100%;
+  width: 108px;
+  line-height: 100%;
 }

@@ -1,26 +1,26 @@
 .pokemon-viewer {
-    background-color: var(--black-color);
-    color: var(--light-gray-color);
-    width: 484px;
-    padding: 44px 44px 16px;
+  background-color: var(--black-color);
+  color: var(--light-gray-color);
+  width: 484px;
+  padding: 44px 44px 16px;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .sprite {
-    width: 200px;
-    height: 200px;
-    margin: 44px auto;
+  width: 200px;
+  height: 200px;
+  margin: 44px auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sprite img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .stats {
-    margin-top: 46px;
+  margin-top: 46px;
 }
