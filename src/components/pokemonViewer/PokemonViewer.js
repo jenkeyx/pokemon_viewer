@@ -1,7 +1,6 @@
-import "./pokemonViewer.css"
+import "./pokemon-viewer.css"
 import axios from "axios";
 import {useEffect, useState} from "react";
-import pokemonPlaceholder from "../../icons/pokemon_placeholder.png"
 import {Typography} from "@mui/material";
 import capitalizeFirstLetter from "../../helpers/capitalizeFirstLetter";
 import returnImgScale from "../../helpers/returnImgScale";
@@ -13,7 +12,7 @@ function PokemonViewer(props) {
     const stubPokemonInfo = {
         name: "select pokemon",
         sprites: {
-            front_default: pokemonPlaceholder
+            front_default: ""
         },
         moves: [],
         id: "",
