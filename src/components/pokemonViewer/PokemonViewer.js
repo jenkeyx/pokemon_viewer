@@ -54,7 +54,7 @@ function PokemonViewer(props) {
 
     return (
         <div className={"pokemon-viewer"}>
-            <Typography sx={{fontWeight:"bold", lineHeight: "100%"}} variant={"h3"}>
+            <Typography sx={{fontWeight: "bold", lineHeight: "100%"}} variant={"h3"}>
                 {isLoaded ? capitalizeFirstLetter(pokemonInfo.name) :
                     "Pokemon"
                 }
@@ -67,16 +67,16 @@ function PokemonViewer(props) {
                     /> : null}
             </div>
             <div className={"stats"}>
-                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
+                <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
                     {"Снялся в " + pokemonInfo.moves.length + " сериях"}
                 </Typography>
-                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
+                <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
                     {"Id: " + pokemonInfo.id}
                 </Typography>
-                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
+                <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
                     {"height: " + pokemonInfo.height}
                 </Typography>
-                <Typography sx={{fontWeight:500, fontSize:"17px", lineHeight:"150%"}}>
+                <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
                     {"attack: " + pokemonInfo.stats[1].base_stat}
                 </Typography>
             </div>

@@ -14,21 +14,18 @@ function App() {
     const THEME = createTheme({
         typography: {
             "fontFamily": "Raleway",
-            "fontWeightLight": 300,
-            "fontWeightRegular": 400,
-            "fontWeightMedium": 500
         },
         components: {
             MuiChip: {
                 styleOverrides: {
                     root: {
-                        fontSize: 22,
+                        fontSize: 20,
                         paddingTop: "30px",
                         paddingBottom: "30px",
-                        paddingLeft: "8px",
-                        paddingRight: "8px",
-                        marginBottom: "10px",
+                        paddingLeft: "9px",
+                        paddingRight: "9px",
                         borderRadius: "44px",
+                        marginBottom: "10px",
                         backgroundColor: "#1986EC"
                     }
                 }
