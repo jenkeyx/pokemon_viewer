@@ -4,10 +4,9 @@ import {useEffect, useState} from "react";
 import {Typography} from "@mui/material";
 import capitalizeFirstLetter from "../../helpers/capitalizeFirstLetter";
 import returnImgScale from "../../helpers/returnImgScale";
+import {API_URL} from "../../App";
 
 function PokemonViewer(props) {
-
-    const API_URL = "https://pokeapi.co/api/v2/pokemon/"
 
     const stubPokemonInfo = {
         name: "select pokemon",
@@ -25,8 +24,7 @@ function PokemonViewer(props) {
 
     useEffect(() => {
         if (props.selectedPokemon) {
-
-            axios.get(API_URL + props.selectedPokemon).then((response) => {
+            axios.get(API_URL+props.selectedPokemon).then((response) => {
                 setPokemonInfo(response.data)
                 setIsLoaded(true);
             })
@@ -53,16 +51,16 @@ function PokemonViewer(props) {
             </div>
             <div className={"stats"}>
                 <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
-                    {"Снялся в " + pokemonInfo.moves.length + " сериях"}
+                    {`Снялся в ${pokemonInfo.moves.length} сериях`}
                 </Typography>
                 <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
-                    {"Id: " + pokemonInfo.id}
+                    {`Id: ${pokemonInfo.id}`}
                 </Typography>
                 <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
-                    {"height: " + pokemonInfo.height}
+                    {`height: ${pokemonInfo.height}` }
                 </Typography>
                 <Typography sx={{fontWeight: 500, fontSize: "17px", lineHeight: "150%"}}>
-                    {"attack: " + pokemonInfo.stats[1].base_stat}
+                    {`attack: ${pokemonInfo.stats[1].base_stat}` }
                 </Typography>
             </div>
         </div>

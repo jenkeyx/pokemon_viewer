@@ -3,6 +3,7 @@ import PokemonViewer from "../pokemonViewer/PokemonViewer";
 import axios from "axios";
 import {useEffect, useState} from "react";
 import {Chip} from "@mui/material";
+import {API_URL} from "../../App";
 
 function ChipsContainer() {
 
@@ -10,8 +11,8 @@ function ChipsContainer() {
     const [selectedPokemon, setSelectedPokemon] = useState()
 
     useEffect(() => {
-        const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=6"
-        axios.get(apiUrl).then((response) => {
+
+        axios.get(API_URL + "?limit=6").then((response) => {
             setPokemons(response.data.results)
         })
 

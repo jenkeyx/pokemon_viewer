@@ -7,6 +7,8 @@ import "@fontsource/raleway/500.css"
 import "@fontsource/raleway/600.css"
 import "@fontsource/raleway/700.css"
 
+export const API_URL = "https://pokeapi.co/api/v2/pokemon/"
+
 function App() {
     const THEME = createTheme({
         typography: {
