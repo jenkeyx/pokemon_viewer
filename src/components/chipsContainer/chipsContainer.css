@@ -8,10 +8,10 @@
 
 .chips-container .chips-wrap{
     width: 484px;
-    height: 140px;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
+    padding-top: 10px;
 
 }
 

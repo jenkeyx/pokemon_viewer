@@ -10,7 +10,7 @@ function ChipsContainer() {
     const [selectedPokemon, setSelectedPokemon] = useState()
 
     useEffect(() => {
-        const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=6"
+        const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=10"
         axios.get(apiUrl).then((response) => {
             setPokemons(response.data.results)
         })

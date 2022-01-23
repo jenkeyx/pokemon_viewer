@@ -22,6 +22,7 @@ function App() {
                         paddingBottom: "30px",
                         paddingLeft: "8px",
                         paddingRight: "8px",
+                        marginBottom:"10px",
                         borderRadius: "44px",
                         backgroundColor: "#1986EC"
                     }
