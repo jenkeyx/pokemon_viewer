@@ -1,27 +1,39 @@
 import "./pokemonViewer.css"
 import axios from "axios";
 import {useEffect, useState} from "react";
+import pokemonPlaceholder from "../../icons/pokemon_placeholder.png"
 
 function PokemonViewer(props) {
 
-    const [pokemonInfo, setPokemonInfo] = useState();
+    const stubPokemonInfo = {
+        name: "select pokemon",
+        sprites: {
+            front_default: pokemonPlaceholder
+        },
+        moves: [],
+        id: "",
+        height: "",
+        stats: [{}, {base_stat: ""}]
+    }
+
+    const [pokemonInfo, setPokemonInfo] = useState(stubPokemonInfo);
 
     useEffect(() => {
-        if (props.selectedPokemon){
+        if (props.selectedPokemon) {
             const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
 
             axios.get(apiUrl + props.selectedPokemon).then((response) => {
                 setPokemonInfo(response.data)
             })
         }
-    },[props.selectedPokemon]);
+    }, [props.selectedPokemon]);
 
 
-    if (pokemonInfo){
+    if (pokemonInfo) {
         return (
             <div className={"pokemon-viewer"}>
                 <div className={"name"}>
-                    {pokemonInfo ? pokemonInfo.name: "select pokemon"}
+                    {pokemonInfo ? pokemonInfo.name : "select pokemon"}
                 </div>
                 <div className={"sprite"}>
                     <img alt={"pokemon"} src={pokemonInfo.sprites.front_default}/>
@@ -42,7 +54,7 @@ function PokemonViewer(props) {
                 </div>
             </div>
         )
-    }else{
+    } else {
         return null
     }
 }

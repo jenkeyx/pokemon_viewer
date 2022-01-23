@@ -2,7 +2,7 @@ import "./header.css"
 import clickIcon from '../../icons/Desktop/Icon.svg'
 
 function Header() {
-    return(
+    return (
         <div className={"header"}>
             <div className={"title"}>
                 ПОКЕМОНЫ API
