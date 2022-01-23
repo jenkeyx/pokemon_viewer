@@ -5,10 +5,9 @@ import { Typography } from "@mui/material";
 import capitalizeFirstLetter from "../../helpers/capitalizeFirstLetter";
 import returnImgScale from "../../helpers/returnImgScale";
 import { API_URL } from "../../App";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 function PokemonViewer(props) {
-
   const statsStyles = { fontWeight: 500, fontSize: "17px", lineHeight: "150%" };
 
   const stubPokemonInfo = {
@@ -32,7 +31,6 @@ function PokemonViewer(props) {
         setIsLoaded(true);
       });
     }
-    return setIsLoaded(false);
   }, [props.selectedPokemon]);
 
   let imgScale = returnImgScale(pokemonInfo.height);
@@ -71,7 +69,7 @@ function PokemonViewer(props) {
 }
 
 PokemonViewer.propTypes = {
-  selectedPokemon: PropTypes.string
-}
+  selectedPokemon: PropTypes.string,
+};
 
 export default PokemonViewer;
