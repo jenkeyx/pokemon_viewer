@@ -1,7 +1,6 @@
 body {
     background: #131313;
 
-    /*base text styles*/;
     color: var(--white-color);
 
     display: flex;

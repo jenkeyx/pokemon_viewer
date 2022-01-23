@@ -3,8 +3,12 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import pokemonPlaceholder from "../../icons/pokemon_placeholder.png"
 import {Typography} from "@mui/material";
+import capitalizeFirstLetter from "../../helpers/capitalizeFirstLetter";
+import returnImgScale from "../../helpers/returnImgScale";
 
 function PokemonViewer(props) {
+
+    const API_URL = "https://pokeapi.co/api/v2/pokemon/"
 
     const stubPokemonInfo = {
         name: "select pokemon",
@@ -13,7 +17,7 @@ function PokemonViewer(props) {
         },
         moves: [],
         id: "",
-        height: "16",
+        height: "",
         stats: [{}, {base_stat: ""}]
     }
 
@@ -22,9 +26,8 @@ function PokemonViewer(props) {
 
     useEffect(() => {
         if (props.selectedPokemon) {
-            const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
 
-            axios.get(apiUrl + props.selectedPokemon).then((response) => {
+            axios.get(API_URL + props.selectedPokemon).then((response) => {
                 setPokemonInfo(response.data)
                 setIsLoaded(true);
             })
@@ -32,23 +35,6 @@ function PokemonViewer(props) {
         return (setIsLoaded(false))
     }, [props.selectedPokemon]);
 
-    //Имя с сервера приходит с маленькой буквы, потому надо вставить большую букву.
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-    //возвращает увеличенные размеры спрайта маленьких покемонов
-    function returnImgScale(height) {
-        if (height === "0") {
-            return "100%"
-        } else if (height < 10) {
-            return "200%"
-        } else if (height >= 10 && height <= 15) {
-            return "150%"
-        } else {
-            return "100%"
-        }
-    }
 
     let imgScale = returnImgScale(pokemonInfo.height)
 

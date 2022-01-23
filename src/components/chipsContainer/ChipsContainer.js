@@ -14,6 +14,7 @@ function ChipsContainer() {
         axios.get(apiUrl).then((response) => {
             setPokemons(response.data.results)
         })
+
     }, [setPokemons]);
 
     function handleClick(e, index) {
