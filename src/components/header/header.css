@@ -14,8 +14,9 @@
     padding: 7px;
 }
 
-.hint > *{
-    display: inline-block;
+.hint {
+    display: flex;
+    align-items: center;
 }
 .hint img{
     margin-right: 10px;

@@ -20,6 +20,8 @@ function App() {
                     root:{
                         paddingTop: "30px",
                         paddingBottom: "30px",
+                        paddingLeft:"8px",
+                        paddingRight: "8px",
                         borderRadius:"44px",
                     }
                 }

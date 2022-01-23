@@ -2,13 +2,15 @@
     width: 980px;
     margin: 54px auto 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .chips-container .chips-wrap{
     width: 484px;
-    height: 130px;
+    height: 140px;
     display: flex;
+    align-items: center;
     flex-flow: row wrap;
 
 }
