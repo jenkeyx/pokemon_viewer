@@ -6,16 +6,15 @@ import { Chip } from "@mui/material";
 import { API_URL } from "../../App";
 
 function ChipsContainer() {
-  const [pokemons, setPokemons] = useState({});
-  const [selectedPokemon, setSelectedPokemon] = useState();
+  const [pokemons, setPokemons] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState("bulbasaur");
 
   useEffect(() => {
     axios
       .get(API_URL + "?limit=6")
       .then((response) => {
-        let responseData = response.data.results;
+        const responseData = response.data.results;
         setPokemons(responseData);
-        setSelectedPokemon(Array.from(responseData)[0].name);
       })
       .catch((error) => {
         if (error.response) {
@@ -26,7 +25,7 @@ function ChipsContainer() {
           console.log(error.request);
         }
       });
-  }, [setPokemons]);
+  }, []);
 
   function handleClick(e, index) {
     setSelectedPokemon(index);
@@ -35,7 +34,7 @@ function ChipsContainer() {
   return (
     <div className={"chips-container"}>
       <div className={"chips-wrap"}>
-        {Array.from(pokemons).map((pokemon) => (
+        {pokemons.map((pokemon) => (
           <Chip
             label={pokemon.name}
             key={pokemon.name}

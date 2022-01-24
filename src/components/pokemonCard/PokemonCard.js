@@ -23,6 +23,7 @@ function PokemonCard(props) {
 
   const [pokemonInfo, setPokemonInfo] = useState(stubPokemonInfo);
   const [isLoaded, setIsLoaded] = useState(null);
+  const [imgScale, setImgScale] = useState("100%");
 
   useEffect(() => {
     if (props.selectedPokemon) {
@@ -30,6 +31,7 @@ function PokemonCard(props) {
         .get(API_URL + props.selectedPokemon)
         .then((response) => {
           setPokemonInfo(response.data);
+          setImgScale(returnImgScale(pokemonInfo.height));
           setIsLoaded(true);
         })
         .catch((error) => {
@@ -44,8 +46,6 @@ function PokemonCard(props) {
     }
   }, [props.selectedPokemon]);
 
-  let imgScale = returnImgScale(pokemonInfo.height);
-
   return (
     <div className={"pokemon-viewer"}>
       <Typography
@@ -55,13 +55,13 @@ function PokemonCard(props) {
         {isLoaded ? capitalizeFirstLetter(pokemonInfo.name) : "Pokemon"}
       </Typography>
       <div className={"sprite"}>
-        {isLoaded ? (
+        {isLoaded && (
           <img
             alt={"pokemon"}
             src={pokemonInfo.sprites.front_default}
             height={imgScale}
           />
-        ) : null}
+        )}
       </div>
       <div className={"stats"}>
         <Typography sx={statsStyles}>
